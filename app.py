@@ -7,9 +7,7 @@ from modules.preprocess import preprocess_text
 from modules.skill_extractor import extract_skills
 from modules.ats_calculator import calculate_ats_score
 
-# --------------------------------------------------
 # PAGE CONFIG
-# --------------------------------------------------
 
 st.set_page_config(
     page_title="AI Resume Analyzer",
@@ -17,9 +15,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# --------------------------------------------------
 # CUSTOM CSS
-# --------------------------------------------------
 
 st.markdown("""
 <style>
@@ -109,9 +105,9 @@ footer {visibility:hidden;}
 </style>
 """, unsafe_allow_html=True)
 
-# --------------------------------------------------
+
 # SIDEBAR
-# --------------------------------------------------
+
 
 with st.sidebar:
 
@@ -141,9 +137,9 @@ with st.sidebar:
         "Built using Python, NLP, Scikit-Learn and Streamlit."
     )
 
-# --------------------------------------------------
+
 # HERO SECTION
-# --------------------------------------------------
+
 
 st.markdown("""
 <div class='hero'>
@@ -158,9 +154,9 @@ boost your ATS score instantly.
 </div>
 """, unsafe_allow_html=True)
 
-# --------------------------------------------------
+
 # INPUT AREA
-# --------------------------------------------------
+
 
 col1, col2 = st.columns(2)
 
@@ -176,9 +172,9 @@ with col2:
         height=250
     )
 
-# --------------------------------------------------
+
 # ANALYSIS
-# --------------------------------------------------
+
 
 if st.button("🚀 Analyze Resume"):
 
@@ -242,17 +238,17 @@ if st.button("🚀 Analyze Resume"):
                 2
             )
 
-        st.toast("🎉 Resume Analysis Completed Successfully!", icon="✅")
-        # --------------------------------------------------
+        st.toast(" Resume Analysis Completed Successfully!", icon="✅")
+        
         # METRICS
-        # --------------------------------------------------
+        
 
         c1, c2, c3 = st.columns(3)
 
         with c1:
             st.markdown(f"""
             <div class='metric-card'>
-            <h3>🎯 ATS Score</h3>
+            <h3> ATS Score</h3>
             <h1>{final_score}%</h1>
             </div>
             """, unsafe_allow_html=True)
@@ -273,9 +269,9 @@ if st.button("🚀 Analyze Resume"):
             </div>
             """, unsafe_allow_html=True)
 
-        # --------------------------------------------------
+        
         # TABS
-        # --------------------------------------------------
+        
 
         tab1, tab2, tab3 = st.tabs([
             "📊 Dashboard",
@@ -283,9 +279,9 @@ if st.button("🚀 Analyze Resume"):
             "💡 Suggestions"
         ])
 
-        # --------------------------------------------------
+       
         # DASHBOARD TAB
-        # --------------------------------------------------
+       
 
         with tab1:
 
@@ -383,9 +379,9 @@ if st.button("🚀 Analyze Resume"):
                         "⭐⭐ Needs Improvement"
                     )
 
-        # --------------------------------------------------
+       
         # SKILLS TAB
-        # --------------------------------------------------
+        
 
         with tab2:
 
@@ -437,9 +433,9 @@ if st.button("🚀 Analyze Resume"):
                     "No important skills missing."
                 )
 
-        # --------------------------------------------------
+        
         # SUGGESTION TAB
-        # --------------------------------------------------
+        
 
         with tab3:
 
@@ -498,9 +494,9 @@ Add missing keywords and project details.
             "Please upload Resume PDF and paste Job Description."
         )
 
-# --------------------------------------------------
+
 # FOOTER
-# --------------------------------------------------
+
 
 st.markdown("---")
 
